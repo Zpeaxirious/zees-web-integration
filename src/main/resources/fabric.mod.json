@@ -9,8 +9,8 @@
 	],
 	"contact": {
 		"homepage": "https://yumeverse.net/",
-		"sources": "https://github.com/zpeaxirious/",
-		"issues": "https://github.com/zpeaxirious"
+		"sources": "https://github.com/Zpeaxirious/zees-web-integration",
+		"issues": "https://github.com/Zpeaxirious/zees-web-integration/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/zees-web-integration/icon.png",
