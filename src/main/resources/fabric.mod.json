@@ -43,7 +43,6 @@
 	},
 	"custom": {
 		"modmenu": {
-			"update_checker": false,
 			"links": {
 				"modmenu.discord": "https://discord.gg/Ey9JbZrwQ8"
 			}
