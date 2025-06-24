@@ -1,0 +1,48 @@
+{
+	"schemaVersion": 1,
+	"id": "zees-web-integration",
+	"version": "${version}",
+	"name": "Zee's Web Integration",
+	"description": "A mod that shows certain Minecraft data like chat messages and player statistics in your browser.",
+	"authors": [
+		"Zpeaxirious"
+	],
+	"contact": {
+		"homepage": "https://yumeverse.net/",
+		"sources": "https://github.com/zpeaxirious/",
+		"issues": "https://github.com/zpeaxirious"
+	},
+	"license": "MIT",
+	"icon": "assets/zees-web-integration/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"net.yumeverse.zeeswebintegration.ZeesWebIntegration"
+		],
+		"client": [
+			"net.yumeverse.zeeswebintegration.ZeesWebIntegrationClient"
+		],
+		"fabric-datagen": [
+			"net.yumeverse.zeeswebintegration.ZeesWebIntegrationDataGenerator"
+		]
+	},
+	"mixins": [
+		"zees-web-integration.mixins.json",
+		{
+			"config": "zees-web-integration.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"modmenu": "*"
+	},
+	"custom": {
+		"modmenu": {
+			"update_checker": false
+		}
+	}
+}
