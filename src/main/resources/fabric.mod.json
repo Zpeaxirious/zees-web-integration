@@ -42,7 +42,11 @@
 	},
 	"custom": {
 		"modmenu": {
-			"update_checker": false
+			"update_checker": false,
+			"links": {
+				"modmenu.discord": "https://discord.gg/Ey9JbZrwQ8",
+				"modmenu.modrinth": "https://modrinth.com/project/zees-web-integration"
+			}
 		}
 	}
 }
