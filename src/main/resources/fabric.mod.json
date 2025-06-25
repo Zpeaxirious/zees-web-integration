@@ -12,7 +12,7 @@
 		"sources": "https://github.com/Zpeaxirious/zees-web-integration",
 		"issues": "https://github.com/Zpeaxirious/zees-web-integration/issues"
 	},
-	"license": "CC0 1.0",
+	"license": "CC BY-NC-SA 4.0",
 	"icon": "assets/zees-web-integration/icon.png",
 	"environment": "client",
 	"entrypoints": {

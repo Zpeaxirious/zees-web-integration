@@ -1,7 +1,7 @@
 function dangerColor(value, max) {
     const percent = value / max;
     if (percent >= 0.7) return "green";
-    if (percent >= 0.3) return "orange";
+    if (percent >= 0.35) return "orange";
     return "red";
 }
 
@@ -25,7 +25,7 @@ function updatePlayerData() {
             `;
         })
         .catch(() => {
-            document.getElementById('player-data').textContent = "Failed to load data";
+            document.getElementById('player-data').textContent = "Error: Mod connectivity not available.";
         });
 }
 
