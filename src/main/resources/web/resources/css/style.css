@@ -39,6 +39,44 @@ body {
     overflow: hidden;
 }
 
+.navbar {
+    overflow: hidden;
+    background-color: var(--background);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 20px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.navbar h1 {
+    margin: 0;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--background);
+    color: var(--text);
+    text-align: center;
+    height: 35px;
+    padding: 20px 0;
+    font-size: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    margin-top: 70px;
+}
+
 .blur {
     position: absolute;
     width: 100vw;
@@ -86,24 +124,4 @@ a:hover {
 
 a:focus {
     outline: 2px solid var(--accent);
-}
-
-.footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--primary);
-    color: var(--text);
-    text-align: center;
-}
-
-.header {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: var(--primary);
-    color: var(--text);
-    text-align: center;
 }

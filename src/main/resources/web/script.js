@@ -25,7 +25,7 @@ function updatePlayerData() {
             `;
         })
         .catch(() => {
-            document.getElementById('player-data').textContent = "Error: Mod connectivity not available.";
+            document.getElementById('player-data').textContent = "Error: Mod disconnected.";
         });
 }
 
