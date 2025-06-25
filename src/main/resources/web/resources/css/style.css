@@ -97,3 +97,13 @@ a:focus {
     color: var(--text);
     text-align: center;
 }
+
+.header {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--primary);
+    color: var(--text);
+    text-align: center;
+}
