@@ -23,7 +23,6 @@ public class WebUIServer extends NanoHTTPD {
                 case "/resources/css/style.css" -> serveStatic("web/resources/css/style.css", "text/css");
                 case "/resources/css/marked.css" -> serveStatic("web/resources/css/marked.css", "text/css");
                 case "/resources/icon.png" -> serveStatic("web/resources/icon.png", "image/png");
-                case "/resources/background.png" -> serveStatic("web/resources/background.png", "image/png");
                 case "/resources/fonts/font1.ttf" -> serveStatic("web/resources/fonts/font1.ttf", "application/font-x-font");
                 case "/player" -> servePlayerData();
                 default -> newFixedLengthResponse(Response.Status.NOT_FOUND, "text/plain", "404 Not Found");
