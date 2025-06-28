@@ -4,31 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zee's WebUI</title>
-
     <link rel="icon" type="image/x-icon" href="resources/icon.png">
-
     <link rel="stylesheet" href="resources/css/style.css">
-    <link rel="stylesheet" href="resources/css/marked.css">
 </head>
-<body class="blur">
+<body>
+    <div class="glass-container">
+        <header class="app-header">
+            <div class="logo-container">
+                <h1>Zee's Web Integration</h1>
+            </div>
+        </header>
 
-<div class="navbar">
-    <h1>Zee's Web Integration</h1>
-</div>
+        <main class="content-area">
+            <div class="player-card">
+                <div class="card-header">
+                    <h2>Player Info</h2>
+                    <div class="status-indicator" id="connection-status"></div>
+                </div>
+                <div class="card-body" id="player-data">
+                    <div class="loading-spinner"></div>
+                </div>
+            </div>
+        </main>
 
-<div class="main">
+        <footer class="app-footer">
+            <div class="footer-content">
+                <a href="https://github.com/zpeaxirious/zees-web-integration">Zee's Web Integration</a> 
+                &copy; 2025 by <a href="https://github.com/zpeaxirious">Zpeaxirious</a> 
+                is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+            </div>
+        </footer>
+    </div>
 
-<fieldset>
-    <legend>Player Info</legend>
-    <p id="player-data">Loading...</p>
-</fieldset>
-
-</div>
-
-<div class="footer">
-    <a href="https://github.com/zpeaxirious/zees-web-integration">Zee's Web Integration</a> &copy; 2025 by <a href="https://github.com/zpeaxirious">Zpeaxirious</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
-</div>
-
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
