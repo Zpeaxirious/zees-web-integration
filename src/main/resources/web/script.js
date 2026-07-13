@@ -33,7 +33,7 @@ elements.statusIndicator.classList.add('status-indicator');
 function getStatusColor(value, max) {
     // Handle cases where max might be 0 or undefined
     if (!max || max <= 0) return "var(--danger)";
-    
+
     const percent = value / max;
     if (percent >= 0.7) return "var(--success)";
     if (percent >= 0.35) return "var(--warning)";
@@ -77,7 +77,7 @@ function createErrorMessage(message, isWarning = false) {
     return `
         <div class="error-message">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                ${isWarning 
+                ${isWarning
                     ? '<circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line>'
                     : '<path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line>'
                 }
@@ -147,45 +147,44 @@ function escapeHtml(text) {
  */
 async function updatePlayerData() {
     try {
-        // Show loading state
-        elements.playerData.innerHTML = createLoadingSpinner();
-        
         const response = await fetch(CONFIG.endpoint);
-        
+
         if (!response.ok) {
-            throw new Error(`Server error: ${response.status}`);
+          throw new Error(`Server error: ${response.status}`);
         }
-        
+
         const data = await response.json();
-        
+
         // Update connection status
         elements.statusIndicator.classList.add('connected');
-        
+
         // Handle server-side errors
         if (data.error) {
             elements.playerData.innerHTML = createErrorMessage(data.error, true);
             return;
         }
-        
+
         // Update max values from server data if available
         updateMaxValues(data);
-        
+
         // Update with player data
         elements.playerData.innerHTML = createPlayerStats(data);
-        
+
     } catch (error) {
         // Update connection status
         elements.statusIndicator.classList.remove('connected');
-        
+
         // Show appropriate error message
-        const errorMessage = error.message.includes('Failed to fetch') 
-            ? 'Connection failed - Server offline' 
+        const errorMessage = error.message.includes('Failed to fetch')
+            ? 'Connection failed - Server offline'
             : error.message;
-            
+
         elements.playerData.innerHTML = createErrorMessage(errorMessage);
-        
+
         // Log error for debugging
         console.error('Player data update failed:', error);
+
+        elements.playerData.innerHTML = createLoadingSpinner();
     }
 }
 
@@ -195,13 +194,13 @@ async function updatePlayerData() {
 function init() {
     // Set up initial state
     elements.statusIndicator.style.opacity = '1';
-    
+
     // Start updates with slight delay for animation
     setTimeout(() => {
         updatePlayerData();
         setInterval(updatePlayerData, CONFIG.updateInterval);
     }, CONFIG.initialDelay);
-    
+
     // Clean up on page unload
     window.addEventListener('beforeunload', () => {
         clearInterval(updateInterval);

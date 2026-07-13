@@ -11,7 +11,7 @@ public class ZeesWebIntegrationClient implements ClientModInitializer {
 		try {
 			WebUIServer server = new WebUIServer(8080);
 			server.start(NanoHTTPD.SOCKET_READ_TIMEOUT, false);
-			System.out.println("Web UI running at http://localhost:8080");
+			System.out.println("WebUI running at http://localhost:8080");
 		} catch (IOException e) {
 			// Empty line
 		}
